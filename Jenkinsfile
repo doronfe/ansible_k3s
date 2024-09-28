@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Checkout the repository
-                    echo ${params.HOST_IP}
+                    echo "${params.HOST_IP}"
                     //checkout scm
                     // Run Ansible playbook
                     //ansiblePlaybook(
