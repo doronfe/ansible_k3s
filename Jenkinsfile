@@ -13,14 +13,14 @@ pipeline {
             steps {
                 script {
                     // Checkout the repository
-                    checkout scm
                     echo ${params.HOST_IP}
+                    //checkout scm
                     // Run Ansible playbook
-                    ansiblePlaybook(
-                        playbook: 'playbooks/setup_remote_host.yml',
-                        inventory: 'inventory/hosts.ini',
-                        extras: "-e host_ip=${params.HOST_IP} -e username=${params.USERNAME} -e password=${params.PASSWORD} -e ssh_key=${params.SSH_KEY} -e packages='${params.PACKAGES}' -e config_files='${params.CONFIG_FILES}'"
-                    )
+                    //ansiblePlaybook(
+                    //    playbook: 'playbooks/setup_remote_host.yml',
+                    //    inventory: 'inventory/hosts.ini',
+                     //   extras: "-e host_ip=${params.HOST_IP} -e username=${params.USERNAME} -e password=${params.PASSWORD} -e ssh_key=${params.SSH_KEY} -e packages='${params.PACKAGES}' -e config_files='${params.CONFIG_FILES}'"
+                    //)
                 }
             }
         }
