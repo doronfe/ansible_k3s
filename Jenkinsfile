@@ -14,7 +14,7 @@ pipeline {
                 script {
                     // Checkout the repository
                     checkout scm
-
+                    echo ${params.HOST_IP}
                     // Run Ansible playbook
                     ansiblePlaybook(
                         playbook: 'playbooks/setup_remote_host.yml',
