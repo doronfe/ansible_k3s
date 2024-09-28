@@ -9,7 +9,7 @@ pipeline {
         text(name: 'CONFIG_FILES', defaultValue: '', description: 'Configuration files for the software')
     }
     stages {
-        stage('Setup Remote Host') {
+        stage('Print') {
             steps {
                 script {
                     // Checkout the repository
