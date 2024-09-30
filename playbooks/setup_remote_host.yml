@@ -1,6 +1,6 @@
 ---
 - name: Setup Remote Host
-  hosts: "{{ HOST_IP }}"
+  hosts: "{{ host_ip }}"
   become: yes
   vars:
     username: "{{ username }}"
