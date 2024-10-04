@@ -30,5 +30,5 @@
     - name: Deploy configuration files
       copy:
         src: "{{ item }}"
-        dest: "/etc/{{ item | basename }}"
+        dest: "/etc/"
       loop: "{{ config_files.split(', ') }}"
