@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'agentnumberone' }
+    agent { label 'remote' }
     parameters {
         string(name: 'HOST_IP', defaultValue: '', description: 'IP address of the remote host')
         string(name: 'USERNAME', defaultValue: '', description: 'Username to create or use')
