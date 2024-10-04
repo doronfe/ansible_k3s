@@ -31,4 +31,4 @@
       copy:
         src: "{{ item }}"
         dest: "/etc/{{ item | basename }}"
-      loop: "{{ config_files }}"
+      loop: "{{ config_files.split(', ') }}"
