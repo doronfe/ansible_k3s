@@ -16,11 +16,10 @@
         password: "{{ password | password_hash('sha512') }}"
         state: present
 
-    - name: Add SSH key to user's authorized_keys
-      authorized_key:
-        user: "{{ username }}"
-        key: "{{ ssh_key }}"
-        state: present
+    - name: Copy ssh key
+      copy:
+        content: "{{ ssh_key }}"
+        dest: "/etc/jenkins_ssh_key"
 
     - name: Install packages
       apt:
